@@ -14,8 +14,9 @@ pipeline{
         }
         stage ('postbuild') {
             steps {
-                archiveArtifacts artifacts: '**/target/gameoflife.war', 
+                 archiveArtifacts artifacts: '**/target/gameoflife.war', 
                   junit '**/surefire-reports/TEST-*.xml'
+        
         
             }
 
